@@ -1,38 +1,105 @@
 # Agenda Service
 
-## æ¦‚è¿°
-	åˆ©ç”¨å‘½ä»¤è¡Œ æˆ– web å®¢æˆ·ç«¯è°ƒç”¨è¿œç«¯æœåŠ¡æ˜¯æœåŠ¡å¼€å‘çš„é‡è¦å†…å®¹ã€‚å…¶ä¸­ï¼Œè¦ç‚¹æ˜¯å¦‚ä½•å®ç° API First å¼€å‘ï¼Œä½¿å¾—å›¢é˜Ÿåä½œå˜å¾—æ›´æœ‰æ•ˆç‡ã€‚
-## ä»»åŠ¡ç›®æ ‡
-	1. ç†Ÿæ‚‰ API è®¾è®¡å·¥å…·ï¼Œå®ç°ä»èµ„æºï¼ˆé¢†åŸŸï¼‰å»ºæ¨¡ï¼Œåˆ° API è®¾è®¡çš„è¿‡ç¨‹
-	2. ä½¿ç”¨ Github ï¼Œé€šè¿‡ API æ–‡æ¡£ï¼Œå®ç° agenda å‘½ä»¤è¡Œé¡¹ç›® ä¸ RESTful æœåŠ¡é¡¹ç›®åŒæ­¥å¼€å‘
-	3. ä½¿ç”¨ API è®¾è®¡å·¥å…·æä¾› Mock æœåŠ¡ï¼Œä¸¤ä¸ªå›¢é˜Ÿç‹¬ç«‹æµ‹è¯• API
-	4. ä½¿ç”¨ travis æµ‹è¯•ç›¸å…³æ¨¡å—
+## ¸ÅÊö
+	ÀûÓÃÃüÁîĞĞ »ò web ¿Í»§¶Ëµ÷ÓÃÔ¶¶Ë·şÎñÊÇ·şÎñ¿ª·¢µÄÖØÒªÄÚÈİ¡£ÆäÖĞ£¬ÒªµãÊÇÈçºÎÊµÏÖ API First ¿ª·¢£¬Ê¹µÃÍÅ¶ÓĞ­×÷±äµÃ¸üÓĞĞ§ÂÊ¡£
+## ÈÎÎñÄ¿±ê
+	1. ÊìÏ¤ API Éè¼Æ¹¤¾ß£¬ÊµÏÖ´Ó×ÊÔ´£¨ÁìÓò£©½¨Ä££¬µ½ API Éè¼ÆµÄ¹ı³Ì
+	2. Ê¹ÓÃ Github £¬Í¨¹ı API ÎÄµµ£¬ÊµÏÖ agenda ÃüÁîĞĞÏîÄ¿ Óë RESTful ·şÎñÏîÄ¿Í¬²½¿ª·¢
+	3. Ê¹ÓÃ API Éè¼Æ¹¤¾ßÌá¹© Mock ·şÎñ£¬Á½¸öÍÅ¶Ó¶ÀÁ¢²âÊÔ API
+	4. Ê¹ÓÃ travis ²âÊÔÏà¹ØÄ£¿é
 	
 
-### æˆ‘ä»¬æä¾›çš„æ¥å£
+### ÎÒÃÇÌá¹©µÄ½Ó¿Ú
 ![](./photos/5%E4%B8%AAapi.png)
-## å®éªŒè¿‡ç¨‹è¿è¡Œ
+## ÊµÑé¹ı³ÌÔËĞĞ
 
-### å¯åŠ¨åå°
+### Æô¶¯ºóÌ¨
 ```
-å–åˆ°serviceç›®å½•ä¸‹æ‰§è¡Œ
+È¡µ½serviceÄ¿Â¼ÏÂÖ´ĞĞ
 go run main.go
 ```
 
-### å¼€å§‹æ—¶æ²¡æœ‰ç”¨æˆ·
+### ¿ªÊ¼Ê±Ã»ÓĞÓÃ»§
 ![](./photos/%E5%BC%80%E5%A7%8B%E6%97%B6%E6%B2%A1%E6%9C%89%E7%94%A8%E6%88%B7.png)
-### å»ºç«‹äº†ç”¨æˆ·åæŸ¥è¯¢ï¼Œä»¥åŠåˆ›ç«‹å¤šä¸ªç”¨æˆ·
+### ½¨Á¢ÁËÓÃ»§ºó²éÑ¯£¬ÒÔ¼°´´Á¢¶à¸öÓÃ»§
 ![](./photos/%E6%9F%A5%E8%AF%A2%E7%94%A8%E6%88%B7.png)
 ![](./photos/%E5%A4%9A%E4%B8%AA%E7%94%A8%E6%88%B7.png)
 
-### å¼€å§‹æ—¶æ²¡æœ‰ä¼šè®®
+### ¿ªÊ¼Ê±Ã»ÓĞ»áÒé
 ![](./photos/%E6%9F%A5%E8%AF%A2%E4%BC%9A%E8%AE%AE.png)
 
-### æˆåŠŸåˆ›ç«‹ä¼šè®®
+### ³É¹¦´´Á¢»áÒé
 ![](./photos/%E6%88%90%E5%8A%9F%E5%88%9B%E5%BB%BA%E4%BC%9A%E8%AE%AE.png)
-### ç”¨ç”¨æˆ·åå­—æŸ¥è¯¢å…¶ç›¸å…³ä¿¡æ¯
+### ÓÃÓÃ»§Ãû×Ö²éÑ¯ÆäÏà¹ØĞÅÏ¢
 ![](./photos/%E6%9F%A5%E8%AF%A2%E7%94%A8%E6%88%B7.png)
-### ç”¨ä¼šè®®åå­—è‡ªæŸ¥è¯¢ç›¸å…³ä¿¡æ¯
+### ÓÃ»áÒéÃû×Ö×Ô²éÑ¯Ïà¹ØĞÅÏ¢
 ![](./photos/%E5%90%8D%E5%AD%97%E6%9F%A5%E8%AF%A2%E4%BC%9A%E8%AE%AE.png)
 
 
+### ¾µÏñÏÂÔØºÍ°²×°
+
+	docker pull github.com/Sevennn/github.com/Sevennn/agenda-go-server
+	docker run -dit --name agenda-go-server -v $PATH_TO_SERVER_DATA:/data -p 8080:8080 github.com/Sevennn/github.com/Sevennn/agenda-go-server server
+	docker run --rm --network host -v $PATH_TO_CLI_DATA:/data github.com/Sevennn/github.com/Sevennn/agenda-go-server cli help
+### ³É¹¦Éú³É¾µÏñ
+
+[¾µÏñµØÖ·](https://hub.docker.com/r/418057982/agenda-go-server/builds/)
+![](https://github.com/453326526/agenda-go-server/blob/master/photos/%E9%95%9C%E5%83%8F.png)
+
+## Docker°²×°¹ı³Ì
+### Ê¹ÓÃ APT ¾µÏñÔ´ °²×°
+
+	ÓÉÓÚ¹Ù·½Ô´Ê¹ÓÃ HTTPS ÒÔÈ·±£Èí¼şÏÂÔØ¹ı³ÌÖĞ²»±»´Û¸Ä¡£Òò´Ë£¬ÎÒÃÇÊ×ÏÈĞèÒªÌí¼ÓÊ¹ÓÃ HTTPS ´«ÊäµÄÈí¼ş°üÒÔ¼° CA Ö¤Êé¡£
+
+	```bash
+	$ sudo apt-get update
+
+	$ sudo apt-get install \
+	    apt-transport-https \
+	    ca-certificates \
+	    curl \
+	    software-properties-common
+	```
+
+	¼øÓÚ¹úÄÚÍøÂçÎÊÌâ£¬Ç¿ÁÒ½¨ÒéÊ¹ÓÃ¹úÄÚÔ´£¬¹Ù·½Ô´ÇëÔÚ×¢ÊÍÖĞ²é¿´¡£
+
+	ÎªÁËÈ·ÈÏËùÏÂÔØÈí¼ş°üµÄºÏ·¨ĞÔ£¬ĞèÒªÌí¼ÓÈí¼şÔ´µÄ GPG ÃÜÔ¿¡£
+
+	```bash
+	$ curl -fsSL https://mirrors.ustc.edu.cn/docker-ce/linux/ubuntu/gpg | sudo apt-key add -
+
+
+### ¹Ù·½Ô´
+
+### $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+	È»ºó£¬ÎÒÃÇĞèÒªÏò `source.list` ÖĞÌí¼Ó Docker Èí¼şÔ´
+
+	```bash
+	$ sudo add-apt-repository \
+	    "deb [arch=amd64] https://mirrors.ustc.edu.cn/docker-ce/linux/ubuntu \
+	    $(lsb_release -cs) \
+	    stable"
+
+
+	¸üĞÂ apt Èí¼ş°ü»º´æ£¬²¢°²×° `docker-ce`£º
+
+	```bash
+	$ sudo apt-get update
+
+	$ sudo apt-get install docker-ce
+	```
+
+### Æô¶¯ Docker CE
+
+	```bash
+	$ sudo systemctl enable docker
+	$ sudo systemctl start docker
+	```
+
+	Ubuntu 14.04 ÇëÊ¹ÓÃÒÔÏÂÃüÁîÆô¶¯£º
+
+	```bash
+	$ sudo service docker start
+	```
+	
